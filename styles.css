@@ -1,5 +1,5 @@
 /* Reset some default styles to ensure consistency across browsers */
-body, h1, h2, p, ul {
+body, h1, h2, p, ul, ol, li, figure, figcaption {
     margin: 0;
     padding: 0;
 }
@@ -9,6 +9,7 @@ body {
     background-color: #f0f0f0;
     color: #333;
     font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 /* Style the header */
@@ -49,13 +50,87 @@ section {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 10px;
 }
 
-ul {
-    list-style-type: disc;
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul, ol {
+    font-size: 16px;
     margin-left: 20px;
+}
+
+/* Style links */
+a {
+    color: #0078d4;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Stylize buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: #fff;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Style form inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style alerts */
+.success {
+    color: #4caf50;
+}
+
+.error {
+    color: #f44336;
+}
+
+/* Style images */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Style the footer */
@@ -66,12 +141,18 @@ footer {
     padding: 10px;
 }
 
-/* Add styles for links */
-a {
-    color: #0078d4; /* Link color */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline; /* Underline on hover */
+/* Add media queries for responsive design (adjust as needed) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+    }
+    ul, ol {
+        font-size: 14px;
+    }
 }
